@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+</head>
+<body>
+    <script>
+        //No se distinge entre numeros enteros y flotantes
+        // 64 bits en punto flotante Ieee 754
+
+        var x = 3.987654;
+        var y = 4;
+        var a = "99"; // STRING
+
+        
+        console.log( Number.MAX_VALUE);
+        console.log( Number.MIN_VALUE);
+
+        console.log(x, y, a);
+        var z = parseInt(a);
+        console.log(a, typeof a ,z,typeof z);
+        var zz = parseFloat(y);
+        console.log(zz);
+        var zzz= parseFloat(x);
+        console.log(zzz);
+
+        var w = parseInt(x * y);
+        console.log(w);
+
+        var s = x.toFixed(2); // para indicar que queremis solo 2 decimales
+        console.log(s);
+
+        var b = "Hola"; // String
+        var c = parseInt(b);
+        console.log(c); // Nan -> Es un valor 
+        
+        console.log(Number.isNaN(b)); // false -> b no tiene el valor Nan
+        console.log(Number.isNaN(x)); // False -> x no tiene el valor Nan
+        console.log(Number.isNaN(c)); // true
+        console.log(isNaN(b)); //true por que ???
+        
+
+    </script>    
+</body>
+</html>

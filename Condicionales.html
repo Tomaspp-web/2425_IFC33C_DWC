@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <script>
+        var x = 5;
+        var y = 7;
+
+        // if (expresion_booleana)
+        if(x<y){
+            console.log("x es menor que y")
+        } else if (y<x){
+            console.log("x es major que y")
+        }else {
+            console.log("x es igual que y")
+        }
+
+        // Operador ternario 
+        // (expresion_booleana)? resultado_true: resultado_false
+        var c = (x>y)?"X es mayor ":"x es menor";// nomes utilitza quant hi ha 2 opcions
+        console.log(c);
+    </script>
+</body>
+</html>

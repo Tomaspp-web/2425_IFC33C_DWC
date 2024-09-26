@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var x = "Hola"; //en el string sse asignan valores entre comillas dobles ("")
+    var y = 'Hola'; // o entre comillas simples ('')
+    var z = `hola`; // o tombien valen commillas (``)
+    // para hacelo multilinia necessitamos concatenar
+    var w = "hola,"
+    + "que tal?";
+    var q = w.concat("Muy bien,  y tu?");
+
+    var t = "hola \"Tomas\"";
+    var s = 'Adios, \'Tomas\'';
+    var r = "hola 'Tomas' ";
+    var rr = 'Bye, "Tomas"';
+
+
+
+    console.log(x);
+    console.log(y);
+    console.log(z);
+    console.log(w);
+    console.log(q);
+    console.log(t);
+    console.log(s);
+    console.log(r);
+    console.log(rr);
+
+
+    // propiedades 
+    console.log(rr.length); // length nos indica el numero de caracteres del string
+    
+    //Los indices del string empiezan en 0 
+    console.log(rr[0]);
+    //podemos recorre los strings con un bucle
+    for(var i=0;i<rr.length;i++){
+        console.log(rr[i]);
+    }
+    console.log("En la posicion 7 del string rr tenemos la letra...: ",rr.charAt(6));
+    console.log("El codigo UTF-16 del caracter de la posicion 7",rr.charCodeAt(6));
+    
+    console.log(rr.indexOf("T", 3));
+    console.log(rr.search("z"))
+    console.log(rr.includes("ye"));
+    console.log(rr.includes("z"));
+
+
+
+
+    </script>    
+</body>
+</html>
