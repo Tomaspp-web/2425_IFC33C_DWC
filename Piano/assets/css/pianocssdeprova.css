@@ -8,21 +8,18 @@ body {
 
 }
 
-
 .utilitats {
-    width: 720px;
-    height: fit-content;
-    background-color: white;
+    width: 600px;
+    height: 320px;
+    background-color: gainsboro ;
     border-radius: 10px;
     box-shadow: 0 5px 6px rgba(2, 2, 2, 0, 1);
     margin: 0 auto;
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    align-items: center; 
 }
-
 
 .piano {
     width: 700px;
@@ -35,9 +32,7 @@ body {
     padding: 0 1% 3%;
     text-align: center;
     border-radius: 10px;
-
-
-   
+    margin-block-end: 40px;
 }
 
 
@@ -103,11 +98,8 @@ body {
 
 
 .titol {
-
-
     font-family: 'Montserrat', sans-serif;
     font-size: 4em;
-   
     color: #000;
     text-align: center;
     letter-spacing: 1px;
@@ -140,14 +132,12 @@ body {
     background-color: #f9f9f9;
 }
 
-
-
-
 .borrar-btn {
-    background-color: #d43f3a;
-    color: white;
+    background-color:cadetblue;
+    color: black;
     border: none;
-    padding: 10px 20px;
+    margin-left: 40px;
+    padding: 10px 40px;
     cursor: pointer;
     border-radius: 5px;
     font-size: 1em;
@@ -156,7 +146,7 @@ body {
 
 
 .borrar-btn:hover {
-    background-color: #b5322e;
+    background-color: red;
 }
 
 
@@ -189,8 +179,8 @@ body {
 
 
 .play-btn {
-    background-color: #d43f3a;
-    color: white;
+    background-color: greenyellow;
+    color: black;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
@@ -200,7 +190,7 @@ body {
 
 
 .play-btn:hover {
-    background-color: #b5322e;
+    background-color: goldenrod;
 }
 
 
