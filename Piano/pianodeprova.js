@@ -5,7 +5,7 @@ const partitures = [
     { nom: "Sant Antoni i el dimoni", notes: ["MI", "RE", "DO", "RE", "FA", "SOL", "FA", "MI"] }
 ];
 
-const cerca = ["DO","RE"];
+const cerca = ["DO","RE","FA"];
 
 function Nota(nom, tipus){
     this.nom = nom;
@@ -27,9 +27,9 @@ function cercador() {
     });
 
     if (resultats.length>0) {
-        console.log("Partitures trobades: " + resultats.join(", "));
+        console.log("Partitures trobades al meu lloc de partitures: " + resultats.join(", "));
     } else{
-        console.log("Sense resultats")
+        console.log("Sense resultats de canços que tenc")
     }
 }
 cercador();
