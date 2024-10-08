@@ -4,8 +4,6 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .utilitats {
@@ -35,7 +33,6 @@ body {
     margin-block-end: 40px;
 }
 
-
 .key {
     display: inline-block;
     position: relative;
@@ -44,12 +41,10 @@ body {
     max-width: 85px;
 }
 
-
 .key:active .black-key,
 .key.active .black-key {
     top: -5px;
 }
-
 
 .key .white-key {
     background: -webkit-linear-gradient(-30deg, #f8f8f8, #ffffff);
@@ -61,7 +56,6 @@ body {
     height: 210px;
 }
 
-
 .key .white-key:active,
 .key .white-key.active {
     box-shadow: inset 0 1px 0px #ffffff, inset 0 -1px 0px #ffffff, inset 1px 0px 0px #ffffff, inset -1px 0px 0px #ffffff, 0 4px 3px rgba(0, 0, 0, 0.7), inset 0 -1px 0px #ffffff, inset 1px 0px 0px #ffffff, inset -1px -1px 15px #000000, -3px 4px 6px rgba(0, 0, 0, 0.5);
@@ -69,7 +63,6 @@ body {
     top: -5px;
     height: 205px;
 }
-
 
 .key .black-key {
     content: "";
@@ -89,13 +82,11 @@ body {
     z-index: 10;
 }
 
-
 .key .black-key:active,
 .key .black-key.active {
     border-bottom-width: 3px;
     top: 0;
 }
-
 
 .titol {
     font-family: 'Montserrat', sans-serif;
@@ -105,7 +96,6 @@ body {
     letter-spacing: 1px;
 }
 
-
 .seccio_cerca {
     display: flex;
     flex-direction: column;
@@ -114,12 +104,10 @@ body {
    
 }
 
-
 .cercant h2 {
     font-size: 1.5em;
     font-weight: bold;
 }
-
 
 .cercant p {
     font-size: 1.2em;
@@ -144,18 +132,15 @@ body {
     margin-top: 10px;
 }
 
-
 .borrar-btn:hover {
     background-color: red;
 }
-
 
 .resultats h2 {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 20px;
 }
-
 
 .resultat-item {
     display: flex;
@@ -165,18 +150,15 @@ body {
     margin-bottom: 5px;
 }
 
-
 .resultat-item p {
     font-size: 1.1em;
 }
-
 
 .resultat-item a {
     color: red;
     text-decoration: none;
     font-size: 0.9em;
 }
-
 
 .play-btn {
     background-color: greenyellow;
@@ -188,9 +170,6 @@ body {
     font-size: 0.9em;
 }
 
-
 .play-btn:hover {
     background-color: goldenrod;
 }
-
-
