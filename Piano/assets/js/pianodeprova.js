@@ -5,7 +5,7 @@ const partitures = [
     { nom: "Sant Antoni i el dimoni", notes: ["MI", "RE", "DO", "RE", "FA", "SOL", "FA", "MI"] }
 ];
 
-const cerca = ["DO","RE"];
+const cerca = ["DO","RE","MI"];
 
 //Constructor de l'objecte nota per quina nota, estam intentant cercar.
 function Nota(nom, tipus){

@@ -1,9 +1,26 @@
 /*css tret de https://github.com/LFeh/piano/blob/master/dev/assets/css/style.css*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap');
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+
 body {
     background-image: url("../img/background/background11.jpg");
     display: grid;
     justify-content: center;
     align-items: center;
+    font-family: 'Montserrat',sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .utilitats {
@@ -89,13 +106,19 @@ body {
 }
 
 .titol {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lobster', "Montserrat",sans-serif;
     font-size: 4em;
+
     color: #000;
     text-align: center;
     letter-spacing: 1px;
 }
-
+h2, h3,h4,h5,h6{
+    font-family:'Roboto','Times New Roman',sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
 .seccio_cerca {
     display: flex;
     flex-direction: column;
