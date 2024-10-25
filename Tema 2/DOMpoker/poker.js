@@ -1,4 +1,4 @@
-function Carta(nom, tipo, img) {
+function carta(nom, tipo, img) {
     this.nom = nom;
     this.tipo = tipo;
     this.img = img;
@@ -6,79 +6,87 @@ function Carta(nom, tipo, img) {
 
 let baraja = [
     //clubs
-    new Carta("ace", "clubs"), new Carta("2", "clubs"), new Carta("3", "clubs"), new Carta("4", "clubs"), new Carta("5", "clubs"),
-     new Carta("6", "clubs"), new Carta("7", "clubs"), new Carta("8", "clubs"), new Carta("9", "clubs"), new Carta("10", "clubs"), 
-     new Carta("jack", "clubs"), new Carta("queen", "clubs"), new Carta("king", "clubs"),
-     //hearts
-    new Carta("ace", "hearts"), new Carta("2", "hearts"), new Carta("3", "hearts"), new Carta("4", "hearts"), 
-    new Carta("5", "hearts"), new Carta("6", "hearts"), new Carta("7", "hearts"), new Carta("8", "hearts"), 
-    new Carta("9", "hearts"), new Carta("10", "hearts"), new Carta("jack", "hearts"), new Carta("queen", "hearts"), new Carta("king", "hearts"),
+    new carta("ace", "clubs"), new carta("2", "clubs"), new carta("3", "clubs"), new carta("4", "clubs"), new carta("5", "clubs"),
+    new carta("6", "clubs"), new carta("7", "clubs"), new carta("8", "clubs"), new carta("9", "clubs"), new carta("10", "clubs"), 
+    new carta("jack", "clubs"), new carta("queen", "clubs"), new carta("king", "clubs"),
+    //hearts
+    new carta("ace", "hearts"), new carta("2", "hearts"), new carta("3", "hearts"), new carta("4", "hearts"), 
+    new carta("5", "hearts"), new carta("6", "hearts"), new carta("7", "hearts"), new carta("8", "hearts"), 
+    new carta("9", "hearts"), new carta("10", "hearts"), new carta("jack", "hearts"), new carta("queen", "hearts"), new carta("king", "hearts"),
     //spades
-    new Carta("ace", "spades"), new Carta("2", "spades"), new Carta("3", "spades"), new Carta("4", "spades"), new Carta("5", "spades"), 
-    new Carta("6", "spades"), new Carta("7", "spades"), new Carta("8", "spades"), new Carta("9", "spades"), new Carta("10", "spades"), 
-    new Carta("jack", "spades"), new Carta("queen", "spades"), new Carta("king", "spades"),
+    new carta("ace", "spades"), new carta("2", "spades"), new carta("3", "spades"), new carta("4", "spades"), new carta("5", "spades"), 
+    new carta("6", "spades"), new carta("7", "spades"), new carta("8", "spades"), new carta("9", "spades"), new carta("10", "spades"), 
+    new carta("jack", "spades"), new carta("queen", "spades"), new carta("king", "spades"),
     //diamonds
-    new Carta("ace", "diamonds"), new Carta("2", "diamonds"), new Carta("3", "diamonds"), new Carta("4", "diamonds"), new Carta("5", "diamonds"), 
-    new Carta("6", "diamonds"), new Carta("7", "diamonds"), new Carta("8", "diamonds"), new Carta("9", "diamonds"), new Carta("10", "diamonds"), 
-    new Carta("jack", "diamonds"), new Carta("queen", "diamonds"), new Carta("king", "diamonds"),
+    new carta("ace", "diamonds"), new carta("2", "diamonds"), new carta("3", "diamonds"), new carta("4", "diamonds"), new carta("5", "diamonds"), 
+    new carta("6", "diamonds"), new carta("7", "diamonds"), new carta("8", "diamonds"), new carta("9", "diamonds"), new carta("10", "diamonds"), 
+    new carta("jack", "diamonds"), new carta("queen", "diamonds"), new carta("king", "diamonds"),
 ];
 
 function barajar(baraja) {
-    return baraja.sort(() => 0.5 - Math.random());
+    for (let i = baraja.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [baraja[i], baraja[j]] = [baraja[j], baraja[i]];
+    }
+    return baraja;
 }
 
-function repartircarta() {
-    let carta = [];
+function repartirCartes() {
+    let valor = [];
     for (let i = 0; i < 5; i++) {
-        carta.push(baraja.pop());
+        valor[i] = baraja.pop(); // Use pop() without arguments
     }
-    return carta;
+    return valor;
 }
 
 function repartirMano() {
     let mano = [];
     for (let i = 0; i < 2; i++) {
-        mano.push(baraja.pop());
+        mano[i] = baraja.pop(); // Use pop() without arguments
     }
     return mano;
 }
 
-function borrarcarta() {
-    let elements = document.querySelectorAll("img");
-    for (let img of elements) {
+function borrarCartes() {
+    let element = document.querySelectorAll("img");
+    for (let img of element) {
         img.remove();
     }
 }
 
 function jugar() {
     barajar(baraja);
-    let carta = repartircarta();
-    borrarcarta();
-    mostrarcarta(carta);
-    let parejas = comprovarParella(carta);
+    let valor = repartirCartes();
+    borrarCartes();
+    mostrarCartes(valor);
+    let parejas = comprovarParella(valor);
 
-    let p = document.querySelector("#resultat");
-    p.innerHTML = parejas ? "TENS UNA PARELLA" : "NO TENS CAP PARELLA";
+    let p = document.querySelector(".result");
+    if (p) {
+        p.innerHTML = parejas ? "TENS UNA PARELLA" : "NO TENS CAP PARELLA";
+    }
 }
 
-function comprovarParella(carta) {
+function comprovarParella(valor) {
     let parejas = false;
-    for (let i = 0; i < carta.length - 1; i++) {
-        for (let j = i + 1; j < carta.length; j++) {
-            if (carta[i].nom === carta[j].nom) {
+
+    for (let i = 0; i < valor.length - 1; i++) {
+        for (let j = i + 1; j < valor.length; j++) {
+            if (valor[i].nom === valor[j].nom) {
                 parejas = true;
                 break;
             }
         }
-        if (parejas) break;
+        if (parejas) break;   
     }
+
     return parejas;
 }
 
-function mostrarcarta(carta) {
-    let div = document.querySelector(".carta");
+function mostrarCartes(valor) {
+    let div = document.querySelector(".valor");
     div.innerHTML = '';
-    for (let carta of carta) {
+    for (let carta of valor) {
         let x = document.createElement("img");
         x.setAttribute("src", `cards/${carta.nom}_of_${carta.tipo}.png`);
         x.setAttribute("alt", `${carta.nom} de ${carta.tipo}`);
@@ -86,3 +94,26 @@ function mostrarcarta(carta) {
     }
 }
 
+
+/**
+* var arratValores = ["ace","2","3","4","5","6","7","8","9","10","jack","queen","King"];
+* var arraypalos = ["clubs","diamonds","Hearts","spades"];
+* 
+* var baraja = [];
+* 
+* for(let palo of arrayPalos){
+*   for(let valor of arrayValores){
+*       baraja.push(new carta(valor,palo));
+*   }
+* }
+* 
+* function barajar(baraja){
+*   return baraja.sort(
+*   function(){
+*       return Math.random() - 0.5;
+*       }
+*   )
+* }
+*
+
+ */

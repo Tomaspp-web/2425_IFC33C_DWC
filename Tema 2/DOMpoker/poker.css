@@ -9,14 +9,14 @@ body {
 }
 
 
-.carta {
+.valor {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
 }
 
-.carta img {
+.valor img {
     width: 200px; 
     height: 300px;
     object-fit: cover;
