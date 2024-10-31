@@ -34,7 +34,7 @@ function barajar(baraja) {
 function repartirCartes() {
     let valor = [];
     for (let i = 0; i < 5; i++) {
-        valor[i] = baraja.pop(); // Use pop() without arguments
+        valor[i] = baraja.pop(); 
     }
     return valor;
 }
@@ -42,7 +42,7 @@ function repartirCartes() {
 function repartirMano() {
     let mano = [];
     for (let i = 0; i < 2; i++) {
-        mano[i] = baraja.pop(); // Use pop() without arguments
+        mano[i] = baraja.pop(); 
     }
     return mano;
 }
@@ -114,6 +114,5 @@ function mostrarCartes(valor) {
 *       }
 *   )
 * }
-*
 
- */
+*/
