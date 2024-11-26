@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="poker.css">
-    <title>Jugar a cartes a Poker</title>
+    <title>Jugar a cartas a Poker</title>
 </head>
 <body>
     <div class="valor"></div>
     <button onclick="jugar()">Jugar</button>
     <p></p>
-    <div class="result"></div>  
+    <button onclick="window.location.reload();">Refrescar</button>
+    <button onclick="window.close();">Cerrar la ventana</button>
+    <button onclick="window.opener.close(); window.close();">Cerrar todo el programa</button>
+    <p></p>
+    <div class="result"></div> 
+    <!-- Este div mostrará las cartas de la solución -->
+    <!-- <div class="solucio"></div> -->
+
     <script src="poker.js"></script>
 </body>
 </html>
+

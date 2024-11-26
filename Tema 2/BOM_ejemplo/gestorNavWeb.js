@@ -3,11 +3,20 @@ function mostrarURLActual(){
 }
 
 function irAtras(){
-    window.history.back();
+    if (history.length > 1){
+        history.back();
+    } else {
+        alert("no hay páginas para ir hacia atrás");
+    }
+    
 }
 
 function irAdelante(){
-    window.history.forward();
+    try{
+        history.forward();
+    } catch (e){
+        alert("no ha páginas para ir hacia adelanter");
+    }
 }
 
 function mostrarInfoNavegador(){
@@ -20,7 +29,11 @@ function mostrarInfoNavegador(){
 function redirigirURL(){
     var url = document.getElementById("urlInput").value;
     if (url){
+       try{
         window.location.assign(url);
+       }catch(e){
+        alert("Url invalida")
+       }
     } else{
         alert("Per favor posa una Url valida. Gràcies")
     }

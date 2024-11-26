@@ -1,7 +1,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #2e7d32; 
+    background-image: url(cards/poker-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #f0f0f0;
     text-align: center;
     margin: 0;
@@ -17,8 +19,8 @@ body {
 }
 
 .valor img {
-    width: 200px; 
-    height: 300px;
+    width: 150px; 
+    height: auto;
     object-fit: cover;
     border: 2px solid #fff;
     border-radius: 10px;

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución del Juego</title>
+    <link rel="stylesheet" href="poker.css">
+</head>
+<body>
+    <h3>Solución del juego:</h3>
+    <div class="valor"></div>
+
+    <button onclick="window.location.reload();">Refrescar</button>
+    <button onclick="window.close();">Cerrar la ventana</button>
+    <button onclick="window.opener.close(); window.close();">Cerrar todo el programa</button>
+
+    <script src="poker.js"></script> 
+    
+    <script>
+        // Recuperamos las cartas desde localStorage
+        let valor = JSON.parse(localStorage.getItem('valor')); // Usamos JSON.parse para convertir el string de vuelta a un array
+
+        console.log("Cartas recibidas:", valor);  // Verificamos que las cartas se recibieron correctamente
+
+        // Función para mostrar las cartas en la ventana emergente
+        function mostrarCartes(valor) {
+            let div = document.querySelector('.valor');
+            valor.forEach(carta => {
+                let img = document.createElement("img");
+                img.src = `cards/${carta.nom}_of_${carta.tipo}.png`;  // Asegúrate de que el camino sea correcto
+                img.alt = `${carta.nom} de ${carta.tipo}`;
+                div.appendChild(img);
+            });
+        }
+
+        // Mostrar las cartas en la ventana emergente
+        if (valor && valor.length > 0) {
+            mostrarCartes(valor);
+        } else {
+            document.querySelector('.valor').textContent = "No se han recibido cartas.";
+        }
+    </script>
+</body>
+</html>
