@@ -1,0 +1,108 @@
+/* Estils generals per a la pàgina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header - barra de navegació */
+header {
+    background-color: #c30000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+/* Estil per al títol del header */
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-family: 'Arial', sans-serif;
+}
+
+header .navbar {
+    display: flex;
+    gap: 20px;
+}
+
+header .navbar button {
+    background-color: #ffffff;
+    color: #c30000;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+header .navbar button:hover {
+    background-color: #c30000;
+    color: white;
+}
+
+/* Botó Nova partitura centrat */
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.center-button button {
+    background-color: #c30000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.center-button button:hover {
+    background-color: #c30000;
+}
+
+/* Taula */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Estils per a les capçaleres de la taula */
+th {
+    background-color: #c30000;
+    color: white;
+    font-size: 1.1em;
+}
+
+/* Estils per als botons dins de la taula */
+button {
+    background-color: #c30000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #c30000;
+}
+
+/* Espai entre els botons d'editar i esborrar */
+td button {
+    margin-right: 10px;
+}

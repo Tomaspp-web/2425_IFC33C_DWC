@@ -60,3 +60,4 @@ function cercador() {
 
 // Cridam a la funció cercador
 cercador();
+
