@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Partitures</title>
-    <link rel="stylesheet" href="assets/css/partitures.css"> 
+    <link rel="stylesheet" href="assets/css/partitures.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header amb el títol i els botons -->
     <header>
         <h1>Score Finder</h1>
         <div class="navbar">
-            <button onclick="window.location.href='#';">Partitures</button>
-            <button onclick="window.location.href='#';">Login</button>
+            <button onclick="window.location.href='partitures.html';">Partitures</button>
+            <button onclick="window.open('login.html', 'up', 'width=600,height=400');">Login</button>
         </div>
     </header>
 
-    <!-- Botó per afegir una nova partitura centrat -->
+    
     <div class="center-button">
-        <button onclick="window.location.href='#';">Nova partitura</button>
+        <button>Nova partitura</button>
     </div>
 
     
-
-    <script src="pianodeprova.js"></script> <!-- Carreguem el JS amb l'array de partitures -->
+    <script src="assets/js/partitures.js"></script> 
 </body>
 </html>

@@ -1,11 +1,11 @@
 // Les partitures que tenim ara.
-const partitures = [
+let partitures = [
     {nom:"La Balanguera",notes:["DO", "RE", "MI", "FA", "FA", "SOL", "SOL", "LA#", "LA#"] },
     { nom: "Happy Birthday", notes: ["DO", "DO", "RE", "DO", "FA", "MI", "DO", "DO", "RE", "DO", "SOL", "FA"] },
     { nom: "Sant Antoni i el dimoni", notes: ["MI", "RE", "DO", "RE", "FA", "SOL", "FA", "MI"] }
 ];
 
-const cerca = ["DO","RE","MI"];
+let cerca = ["DO","RE","MI"];
 
 //Constructor de l'objecte nota per quina nota, estam intentant cercar.
 function Nota(nom, tipus){
@@ -15,7 +15,7 @@ function Nota(nom, tipus){
 
 //Funció per veure el que estam cercant.
 function addcerca(nom){
-    const novaNota = new Nota(nom);
+    let novaNota = new Nota(nom);
     cerca.push[novaNota.nom + novaNota.tipus];
 }
 

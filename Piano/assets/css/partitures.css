@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Estils generals per a la pàgina */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Aplicar Montserrat per al cos del text */
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -8,7 +10,7 @@ body {
 
 /* Header - barra de navegació */
 header {
-    background-color: #c30000;
+    background-color: #c30000; /* Fons vermell */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -19,10 +21,11 @@ header {
 /* Estil per al títol del header */
 header h1 {
     margin: 0;
-    font-size: 1.8em;
-    font-family: 'Arial', sans-serif;
+    font-size: 2em; /* Mida augmentada per al títol */
+    font-family: 'Bebas Neue', sans-serif; /* Aplicar Bebas Neue per al títol */
 }
 
+/* Barra de navegació */
 header .navbar {
     display: flex;
     gap: 20px;
@@ -74,6 +77,7 @@ table {
     border-radius: 5px;
 }
 
+/* Estils per a les cel·les de la taula */
 th, td {
     padding: 10px;
     text-align: left;
@@ -81,10 +85,24 @@ th, td {
 }
 
 /* Estils per a les capçaleres de la taula */
-th {
+h2 {
     background-color: #c30000;
     color: white;
     font-size: 1.1em;
+    font-family: 'Lobster', cursive; /* Aplicar Lobster per a les capçaleres de la taula */
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+h3 {
+    background-color: #c30000;
+    color: white;
+    font-size: 1em;
+    font-family: 'Lobster', cursive; /* Aplicar Lobster per a les capçaleres de la taula */
+    margin: 0;
+    padding: 10px;
+    text-align: center;
 }
 
 /* Estils per als botons dins de la taula */
