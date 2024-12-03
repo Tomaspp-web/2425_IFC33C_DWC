@@ -1,5 +1,5 @@
 // Les partitures que tenim ara
-let partitures = [
+let partituresOriginals = [
     {nom: "La Balanguera", idioma: "ca"},
     {nom: "Merry Christmas", idioma: "en"},
     {nom: "Joyeux No Nadall", idioma: "fr"},
@@ -17,6 +17,18 @@ let partitures = [
     {nom: "Imagine", idioma: "en"}
 ];
 
+// Funció per generar un array de partitures repetides fins a 100 entrades
+function generarPartituresRepetides(partitures, total) {
+    let partituresRepetides = [];
+    while (partituresRepetides.length < total) {
+        partituresRepetides.push(...partitures);
+    }
+    return partituresRepetides.slice(0, total); // Limitar a 100 entrades
+}
+
+// Crear l'array amb 100 partitures
+let partitures = generarPartituresRepetides(partituresOriginals, 120);
+
 // Funció per barallar l'array de partitures aleatòriament
 function barallarArray(array) {
     array.sort(() => Math.random() - 0.5);
@@ -31,6 +43,9 @@ function esborrarPartitura(nom, event) {
 
         // Mostrar un alert després d'eliminar la partitura
         alert("La partitura '" + nom + "' ha estat eliminada.");
+    } else {
+        // Mostrar un alert si es cancel·la l'acció
+        alert("S'ha cancel·lat l'eliminació de la partitura '" + nom + "'.");
     }
 }
 
@@ -66,7 +81,7 @@ function crearTaula() {
 
     // Omplir la taula amb les partitures barallades
     for (let i = 0; i < partitures.length; i++) {
-        let partitura = partitures[i]; // Obtenim la partitura aleatòria
+        let partitura = partitures[i]; // Obtenim la partitura
         let fila = document.createElement("tr");
 
         // Crear les cel·les per a cada columna
@@ -81,18 +96,12 @@ function crearTaula() {
         // Crear el botó "Editar"
         let btnEditar = document.createElement("button");
         btnEditar.setAttribute("onclick", "editarPartitura('" + partitura.nom + "')"); // Estableix la funció i el paràmetre
-        let iEditar = document.createElement("i");
-        iEditar.setAttribute("class", "fas fa-edit"); // Afegir la icona d'editar
-        btnEditar.appendChild(iEditar);
-        btnEditar.innerHTML += " Editar"; // Afegir el text "Editar"
+        btnEditar.textContent = "Editar";
 
         // Crear el botó "Esborrar"
         let btnEsborrar = document.createElement("button");
         btnEsborrar.setAttribute("onclick", "esborrarPartitura('" + partitura.nom + "', event)");
-        let iEsborrar = document.createElement("i");
-        iEsborrar.setAttribute("class", "fas fa-trash-alt"); // Afegir la icona d'esborrar
-        btnEsborrar.appendChild(iEsborrar);
-        btnEsborrar.innerHTML += " Esborrar"; // Afegir el text "Esborrar"
+        btnEsborrar.textContent = "Esborrar";
 
         // Afegir els botons a la columna d'accions
         accions.appendChild(btnEditar);
