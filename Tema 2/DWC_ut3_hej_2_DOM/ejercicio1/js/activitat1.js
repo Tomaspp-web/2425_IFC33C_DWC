@@ -29,7 +29,7 @@ function generartablamultiplicar() {
         table.appendChild(tr);
     }
 
-    document.body.appendChild(table); 
+    document.body.appendChild(table);
 }
 
 generartablamultiplicar();
