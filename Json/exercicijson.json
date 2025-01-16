@@ -1,0 +1,55 @@
+{
+    "contenedores": {
+        "Grandes": {
+            "Grandes ancho": {
+                "agua": 0,
+                "Leche": 0,
+                "Aceite": 0,
+                "Vinagre": 0
+            },
+            "Grandes alto": {
+                "agua": 0,
+                "Leche": 0,
+                "Aceite": 0,
+                "Vinagre": 0
+            }
+        },
+        "Medianos": {
+            "Medianos ancho": {
+                "agua": 0,
+                "Leche": 0,
+                "Aceite": 0,
+                "Vinagre": 0
+            },
+            "Medianos alto": {
+                "Alcohol": 0,
+                "lejía": 0,
+                "Amoniaco": 0,
+                "Aguarrás": 0,
+                "Gasolina": 0
+            },
+            "pequeño": {
+                "Alcohol": 0,
+                "lejía": 0,
+                "Amoniaco": 0,
+                "Aguarrás": 0,
+                "Gasolina": 0
+            }
+        },
+        "verticales": {
+            "Medianos alto": {
+                "Alcohol": 0,
+                "lejía": 0,
+                "Amoniaco": 0,
+                "Aguarrás": 0,
+                "Gasolina": 0
+            },
+            "Grandes alto": {
+                "agua": 0,
+                "Leche": 0,
+                "Aceite": 0,
+                "Vinagre": 0
+            }
+        }
+    }
+}
